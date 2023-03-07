@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hopex/config/app_images.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'on_board_screen_one.dart';
+import 'on_board_screens.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
