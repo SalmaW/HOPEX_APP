@@ -70,6 +70,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   );
                 },
                 label: Text('Next'),
+                backgroundColor: Colors.green,
                 icon: Icon(Icons.arrow_forward),
               ),
               const SizedBox(
@@ -98,7 +99,7 @@ class DotIndicator extends StatelessWidget {
       width: isActive ? 12 : 4,
       height: 4,
       decoration: BoxDecoration(
-        color: isActive ? Colors.deepOrange : Colors.deepOrange[200],
+        color: isActive ? Colors.green: Colors.green[200],
         borderRadius: const BorderRadius.all(Radius.circular(12)),
       ),
       // child: ,
@@ -116,9 +117,9 @@ class OnBoard {
 }
 
 final List<OnBoard> data_screen = [
-  OnBoard(picName: "${AppPaths.ob1_path}ob1_removebg.png", title: "Reduce"),
-  OnBoard(picName: "${AppPaths.ob2_path}ob2_removebg.png", title: "Recycle"),
-  OnBoard(picName: "${AppPaths.ob3_path}ob3_removebg.png", title: "Cash Back"),
+  OnBoard(picName: "${AppPaths.ob1_path}ob1.png", title: "Reduce"),
+  OnBoard(picName: "${AppPaths.ob2_path}ob2.png", title: "Recycle"),
+  OnBoard(picName: "${AppPaths.ob3_path}ob3.png", title: "Cash Back"),
 ];
 
 class OnBoardContent extends StatelessWidget {
