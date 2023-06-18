@@ -15,11 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super.initState();
 
-    Future.delayed(Duration(seconds: 5)).then((value) {
+    Future.delayed(const Duration(seconds: 5)).then((value) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx) => const OnBoardingScreen()));
     });
 
   }
+
+  //need the fingerprint at the top of the screen
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +30,15 @@ class _SplashScreenState extends State<SplashScreen> {
         width: double.maxFinite,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 180.0),
+          children: const [
+             Padding(
+              padding: EdgeInsets.symmetric(vertical: 180.0),
               child: Image(
                 image: AssetImage(AppImages.logo),
                 width: 300,
               ),
             ),
-            SpinKitDoubleBounce(
+             SpinKitDoubleBounce(
               color: Color(0xff3cb44c),
               size: 50.0,
             ),

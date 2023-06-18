@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hopex/config/app_images.dart';
+// import 'package:hopex/config/app_images.dart';
 import 'package:hopex/config/app_paths.dart';
+// import 'package:hopex/views/screens/02authentication/01welcome/welcome_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
+
+
+  //needs to change the text on the button at the end of the screen
 
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
@@ -37,15 +41,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Expanded(
                 child: PageView.builder(
                   controller: _pageController,
-                  itemCount: data_screen.length,
+                  itemCount: dataScreen.length,
                   onPageChanged: (index) => {
                     setState(() {
                       _pageIndex = index;
                   }),
                   },
                   itemBuilder: (context, index) => OnBoardContent(
-                    picName: data_screen[index].picName,
-                    title: data_screen[index].title,
+                    picName: dataScreen[index].picName,
+                    title: dataScreen[index].title,
                   ),
                 ),
               ),
@@ -53,7 +57,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ...List.generate(
-                    data_screen.length,
+                    dataScreen.length,
                     (index) => Padding(
                       padding: const EdgeInsets.only(right: 3.0),
                       child: DotIndicator(isActive: index == _pageIndex),
@@ -65,13 +69,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               FloatingActionButton.extended(
                 onPressed: () {
                   _pageController.nextPage(
-                    duration: Duration(milliseconds: 400),
+                    duration: const Duration(milliseconds: 400),
                     curve: Curves.ease,
                   );
                 },
-                label: Text('Next'),
+                label: const Text('Next'),
                 backgroundColor: Colors.green,
-                icon: Icon(Icons.arrow_forward),
+                icon: const Icon(Icons.arrow_forward),
               ),
               const SizedBox(
                 height: 30,
@@ -95,7 +99,7 @@ class DotIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       width: isActive ? 12 : 4,
       height: 4,
       decoration: BoxDecoration(
@@ -116,10 +120,10 @@ class OnBoard {
   });
 }
 
-final List<OnBoard> data_screen = [
-  OnBoard(picName: "${AppPaths.ob1_path}ob1.png", title: "Reduce"),
-  OnBoard(picName: "${AppPaths.ob2_path}ob2.png", title: "Recycle"),
-  OnBoard(picName: "${AppPaths.ob3_path}ob3.png", title: "Cash Back"),
+final List<OnBoard> dataScreen = [
+  OnBoard(picName: "${AppPaths.main_path}ob1.png", title: "Reduce"),
+  OnBoard(picName: "${AppPaths.main_path}ob2.png", title: "Recycle"),
+  OnBoard(picName: "${AppPaths.main_path}ob3.png", title: "Cash Back"),
 ];
 
 class OnBoardContent extends StatelessWidget {
@@ -139,7 +143,7 @@ class OnBoardContent extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 28),
+          style: const TextStyle(fontSize: 28),
           textAlign: TextAlign.center,
         ),
         // const SizedBox(height: 30),
