@@ -8,14 +8,14 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import '../../../../Components/buttons/ConfirmButton.dart';
 // import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class WelcomeScreenOTP extends StatefulWidget {
-  const WelcomeScreenOTP({Key? key}) : super(key: key);
+class LogInScreenOTP extends StatefulWidget {
+  const LogInScreenOTP({Key? key}) : super(key: key);
 
   @override
-  State<WelcomeScreenOTP> createState() => _WelcomeScreenOTPState();
+  State<LogInScreenOTP> createState() => _LogInScreenOTPState();
 }
 
-class _WelcomeScreenOTPState extends State<WelcomeScreenOTP> {
+class _LogInScreenOTPState extends State<LogInScreenOTP> {
   @override
   Widget build(BuildContext context) {
     bool isChecked = false;

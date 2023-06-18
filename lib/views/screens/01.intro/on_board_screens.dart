@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:hopex/config/app_images.dart';
 import 'package:hopex/config/app_paths.dart';
-// import 'package:hopex/views/screens/02authentication/01welcome/welcome_screen.dart';
+// import 'package:hopex/views/screens/02authentication/01welcome/login_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);

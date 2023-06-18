@@ -5,14 +5,14 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import '../../../../Components/buttons/mainButton.dart';
 // import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class LogInScreen extends StatefulWidget {
+  const LogInScreen({Key? key}) : super(key: key);
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<LogInScreen> createState() => _LogInScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _LogInScreenState extends State<LogInScreen> {
   @override
   Widget build(BuildContext context) {
     bool isChecked = false;
